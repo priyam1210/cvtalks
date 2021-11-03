@@ -1,0 +1,595 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <title>CV Talk</title>
+    <meta name="theme-color" content="#14abe3">
+
+</head>
+<body>
+    <div class="start_screen">
+
+        <div class="top_logo">
+            <div class="round_logo">
+                <img src="images/logo.png" />
+            </div>
+            <div class="logo_txt">Get Hired Fast</div>
+        </div>
+        <div class="bottom_section">
+            <a href="javascript:;" class="btn btn-blue fw-600" data-target="#modal_login_mobile" data-toggle="modal">Login with Mobile</a>
+            <a href="javascript:;" class="btn btn-red fw-600" data-target="#modal_login_email" data-toggle="modal">Login with Email</a>
+            <a href="javascript:;" class="create_account text-center text-white d-block mb-3" data-target="#modal_new_user" data-toggle="modal">Create a New Account</a>
+
+            <p class="policy_text">By clicking "Log in" you agree with our Privacy Policy. Learn how we process your data in our <a href="javascript:;">Privacy Policy</a></p>
+        </div>
+    </div>
+    <div class="modal fade" id="modal_otp" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+                <div class="modal-body">
+                    <button type="button" class="close_btn" data-dismiss="modal" aria-label="Close">
+                        <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><rect fill="none" height="24" width="24" /><g><polygon points="17.77,3.77 16,2 6,12 16,22 17.77,20.23 9.54,12" /></g></svg>
+                    </button>
+                    <div class="modal_heading">OTP Verification</div>
+                    <div class="modal_subheading">Enter your OTP code here</div>
+                    <div class="py-5">
+                        <div class="form-group cls_otp_input">
+                            <input type="number" required value="" maxlength="1"/>
+                            <input type="number" required value="" maxlength="1"/>
+                            <input type="number" required value="" maxlength="1"/>
+                            <input type="number" required value="" maxlength="1"/>
+                        </div>
+                        <div class="form-group text-center otp-resend">
+                            Didn't you received any code?
+                            <a href="javascript:;" class="text-red">Resend a new code.</a>
+                        </div>
+                        <div class="form-group">
+                            <button type="button" class="btn btn-blue w-100 mt-3">Verify</button>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade" id="modal_login_email" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+                <div class="modal-body">
+                    <button type="button" class="close_btn" data-dismiss="modal" aria-label="Close">
+                        <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><rect fill="none" height="24" width="24" /><g><polygon points="17.77,3.77 16,2 6,12 16,22 17.77,20.23 9.54,12" /></g></svg>
+                    </button>
+                    <div class="modal_heading">Login</div>
+                    <div class="modal_subheading">Login into your account</div>
+                    <div class="py-5">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Email Address" />
+                            <button type="button" class="btn btn-blue w-100 mt-3">Submit</button>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modal_login_mobile" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+                <div class="modal-body">
+                    <button type="button" class="close_btn" data-dismiss="modal" aria-label="Close">
+                        <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><rect fill="none" height="24" width="24" /><g><polygon points="17.77,3.77 16,2 6,12 16,22 17.77,20.23 9.54,12" /></g></svg>
+                    </button>
+                    <div class="modal_heading">Login</div>
+                    <div class="modal_subheading">Login into your account</div>
+                    <div class="py-5">
+                        <div class="form-group cls_countryphoneselecter">
+                            <select name="phonecountryCode" class="selectpicker countrypicker countryphoneselecter" id="phonecountryCode2" data-width="100px" data-live-search="true" data-flag="true">
+                                <option data-icon="flag-icon flag-icon-dz" value="213" title="+213">Algeria (+213)</option>
+                                <option data-icon="flag-icon flag-icon-ad" value="376" title="+376">Andorra (+376)</option>
+                                <option data-icon="flag-icon flag-icon-ao" value="244" title="+244">Angola (+244)</option>
+                                <option data-icon="flag-icon flag-icon-ai" value="1264" title="+1264">Anguilla (+1264)</option>
+                                <option data-icon="flag-icon flag-icon-ag" value="1268" title="+1268">Antigua &amp; Barbuda (+1268)</option>
+                                <option data-icon="flag-icon flag-icon-ar" value="54" title="+54">Argentina (+54)</option>
+                                <option data-icon="flag-icon flag-icon-am" value="374" title="+374">Armenia (+374)</option>
+                                <option data-icon="flag-icon flag-icon-aw" value="297" title="+297">Aruba (+297)</option>
+                                <option data-icon="flag-icon flag-icon-au" value="61" title="+61">Australia (+61)</option>
+                                <option data-icon="flag-icon flag-icon-at" value="43" title="+43">Austria (+43)</option>
+                                <option data-icon="flag-icon flag-icon-az" value="994" title="+994">Azerbaijan (+994)</option>
+                                <option data-icon="flag-icon flag-icon-bs" value="1242" title="+1242">Bahamas (+1242)</option>
+                                <option data-icon="flag-icon flag-icon-bh" value="973" title="+973">Bahrain (+973)</option>
+                                <option data-icon="flag-icon flag-icon-bd" value="880" title="+880">Bangladesh (+880)</option>
+                                <option data-icon="flag-icon flag-icon-bb" value="1246" title="+1246">Barbados (+1246)</option>
+                                <option data-icon="flag-icon flag-icon-by" value="375" title="+375">Belarus (+375)</option>
+                                <option data-icon="flag-icon flag-icon-be" value="32" title="+32">Belgium (+32)</option>
+                                <option data-icon="flag-icon flag-icon-bz" value="501" title="+501">Belize (+501)</option>
+                                <option data-icon="flag-icon flag-icon-bj" value="229" title="+229">Benin (+229)</option>
+                                <option data-icon="flag-icon flag-icon-bm" value="1441" title="+1441">Bermuda (+1441)</option>
+                                <option data-icon="flag-icon flag-icon-bt" value="975" title="+975">Bhutan (+975)</option>
+                                <option data-icon="flag-icon flag-icon-bo" value="591" title="+591">Bolivia (+591)</option>
+                                <option data-icon="flag-icon flag-icon-ba" value="387" title="+387">Bosnia Herzegovina (+387)</option>
+                                <option data-icon="flag-icon flag-icon-bw" value="267" title="+267">Botswana (+267)</option>
+                                <option data-icon="flag-icon flag-icon-br" value="55" title="+55">Brazil (+55)</option>
+                                <option data-icon="flag-icon flag-icon-bn" value="673" title="+673">Brunei (+673)</option>
+                                <option data-icon="flag-icon flag-icon-bg" value="359" title="+359">Bulgaria (+359)</option>
+                                <option data-icon="flag-icon flag-icon-bf" value="226" title="+226">Burkina Faso (+226)</option>
+                                <option data-icon="flag-icon flag-icon-bi" value="257" title="+257">Burundi (+257)</option>
+                                <option data-icon="flag-icon flag-icon-kh" value="855" title="+855">Cambodia (+855)</option>
+                                <option data-icon="flag-icon flag-icon-cm" value="237" title="+237">Cameroon (+237)</option>
+                                <option data-icon="flag-icon flag-icon-ca" value="1" title="+1" selected>Canada (+1)</option>
+                                <option data-icon="flag-icon flag-icon-cv" value="238" title="+238">Cape Verde Islands (+238)</option>
+                                <option data-icon="flag-icon flag-icon-ky" value="1345" title="+1345">Cayman Islands (+1345)</option>
+                                <option data-icon="flag-icon flag-icon-cf" value="236" title="+236">Central African Republic (+236)</option>
+                                <option data-icon="flag-icon flag-icon-cl" value="56" title="+56">Chile (+56)</option>
+                                <option data-icon="flag-icon flag-icon-cn" value="86" title="+86">China (+86)</option>
+                                <option data-icon="flag-icon flag-icon-co" value="57" title="+57">Colombia (+57)</option>
+                                <option data-icon="flag-icon flag-icon-km" value="269" title="+269">Comoros (+269)</option>
+                                <option data-icon="flag-icon flag-icon-cg" value="242" title="+242">Congo (+242)</option>
+                                <option data-icon="flag-icon flag-icon-ck" value="682" title="+682">Cook Islands (+682)</option>
+                                <option data-icon="flag-icon flag-icon-cr" value="506" title="+506">Costa Rica (+506)</option>
+                                <option data-icon="flag-icon flag-icon-hr" value="385" title="+385">Croatia (+385)</option>
+                                <option data-icon="flag-icon flag-icon-cu" value="53" title="+53">Cuba (+53)</option>
+                                <option data-icon="flag-icon flag-icon-cy" value="90392" title="+90392">Cyprus North (+90392)</option>
+                                <option data-icon="flag-icon flag-icon-cy" value="357" title="+357">Cyprus South (+357)</option>
+                                <option data-icon="flag-icon flag-icon-cz" value="42" title="+42">Czech Republic (+42)</option>
+                                <option data-icon="flag-icon flag-icon-dk" value="45" title="+45">Denmark (+45)</option>
+                                <option data-icon="flag-icon flag-icon-dj" value="253" title="+253">Djibouti (+253)</option>
+                                <option data-icon="flag-icon flag-icon-dm" value="1809" title="+1809">Dominica (+1809)</option>
+                                <option data-icon="flag-icon flag-icon-do" value="1809" title="+1809">Dominican Republic (+1809)</option>
+                                <option data-icon="flag-icon flag-icon-ec" value="593" title="+593">Ecuador (+593)</option>
+                                <option data-icon="flag-icon flag-icon-eg" value="20" title="+20">Egypt (+20)</option>
+                                <option data-icon="flag-icon flag-icon-sv" value="503" title="+503">El Salvador (+503)</option>
+                                <option data-icon="flag-icon flag-icon-gq" value="240" title="+240">Equatorial Guinea (+240)</option>
+                                <option data-icon="flag-icon flag-icon-er" value="291" title="+291">Eritrea (+291)</option>
+                                <option data-icon="flag-icon flag-icon-ee" value="372" title="+372">Estonia (+372)</option>
+                                <option data-icon="flag-icon flag-icon-et" value="251" title="+251">Ethiopia (+251)</option>
+                                <option data-icon="flag-icon flag-icon-fk" value="500" title="+500">Falkland Islands (+500)</option>
+                                <option data-icon="flag-icon flag-icon-fo" value="298" title="+298">Faroe Islands (+298)</option>
+                                <option data-icon="flag-icon flag-icon-fj" value="679" title="+679">Fiji (+679)</option>
+                                <option data-icon="flag-icon flag-icon-fi" value="358" title="+358">Finland (+358)</option>
+                                <option data-icon="flag-icon flag-icon-fr" value="33" title="+33">France (+33)</option>
+                                <option data-icon="flag-icon flag-icon-gf" value="594" title="+594">French Guiana (+594)</option>
+                                <option data-icon="flag-icon flag-icon-pf" value="689" title="+689">French Polynesia (+689)</option>
+                                <option data-icon="flag-icon flag-icon-ga" value="241" title="+241">Gabon (+241)</option>
+                                <option data-icon="flag-icon flag-icon-gm" value="220" title="+220">Gambia (+220)</option>
+                                <option data-icon="flag-icon flag-icon-ge" value="7880" title="+7880">Georgia (+7880)</option>
+                                <option data-icon="flag-icon flag-icon-de" value="49" title="+49">Germany (+49)</option>
+                                <option data-icon="flag-icon flag-icon-gh" value="233" title="+233">Ghana (+233)</option>
+                                <option data-icon="flag-icon flag-icon-gi" value="350" title="+350">Gibraltar (+350)</option>
+                                <option data-icon="flag-icon flag-icon-gr" value="30" title="+30">Greece (+30)</option>
+                                <option data-icon="flag-icon flag-icon-gl" value="299" title="+299">Greenland (+299)</option>
+                                <option data-icon="flag-icon flag-icon-gd" value="1473" title="+1473">Grenada (+1473)</option>
+                                <option data-icon="flag-icon flag-icon-gp" value="590" title="+590">Guadeloupe (+590)</option>
+                                <option data-icon="flag-icon flag-icon-gu" value="671" title="+671">Guam (+671)</option>
+                                <option data-icon="flag-icon flag-icon-gt" value="502" title="+502">Guatemala (+502)</option>
+                                <option data-icon="flag-icon flag-icon-gn" value="224" title="+224">Guinea (+224)</option>
+                                <option data-icon="flag-icon flag-icon-gw" value="245" title="+245">Guinea - Bissau (+245)</option>
+                                <option data-icon="flag-icon flag-icon-gy" value="592" title="+592">Guyana (+592)</option>
+                                <option data-icon="flag-icon flag-icon-ht" value="509" title="+509">Haiti (+509)</option>
+                                <option data-icon="flag-icon flag-icon-hn" value="504" title="+504">Honduras (+504)</option>
+                                <option data-icon="flag-icon flag-icon-hk" value="852" title="+852">Hong Kong (+852)</option>
+                                <option data-icon="flag-icon flag-icon-hu" value="36" title="+36">Hungary (+36)</option>
+                                <option data-icon="flag-icon flag-icon-is" value="354" title="+354">Iceland (+354)</option>
+                                <option data-icon="flag-icon flag-icon-in" value="91" title="+91">India (+91)</option>
+                                <option data-icon="flag-icon flag-icon-id" value="62" title="+62">Indonesia (+62)</option>
+                                <option data-icon="flag-icon flag-icon-ir" value="98" title="+98">Iran (+98)</option>
+                                <option data-icon="flag-icon flag-icon-iq" value="964" title="+964">Iraq (+964)</option>
+                                <option data-icon="flag-icon flag-icon-ie" value="353" title="+353">Ireland (+353)</option>
+                                <option data-icon="flag-icon flag-icon-il" value="972" title="+972">Israel (+972)</option>
+                                <option data-icon="flag-icon flag-icon-it" value="39" title="+39">Italy (+39)</option>
+                                <option data-icon="flag-icon flag-icon-jm" value="1876" title="+1876">Jamaica (+1876)</option>
+                                <option data-icon="flag-icon flag-icon-jp" value="81" title="+81">Japan (+81)</option>
+                                <option data-icon="flag-icon flag-icon-jo" value="962" title="+962">Jordan (+962)</option>
+                                <option data-icon="flag-icon flag-icon-kz" value="7" title="+7">Kazakhstan (+7)</option>
+                                <option data-icon="flag-icon flag-icon-ke" value="254" title="+254">Kenya (+254)</option>
+                                <option data-icon="flag-icon flag-icon-ki" value="686" title="+686">Kiribati (+686)</option>
+                                <option data-icon="flag-icon flag-icon-kp" value="850" title="+850">Korea North (+850)</option>
+                                <option data-icon="flag-icon flag-icon-kr" value="82" title="+82">Korea South (+82)</option>
+                                <option data-icon="flag-icon flag-icon-kw" value="965" title="+965">Kuwait (+965)</option>
+                                <option data-icon="flag-icon flag-icon-kg" value="996" title="+996">Kyrgyzstan (+996)</option>
+                                <option data-icon="flag-icon flag-icon-la" value="856" title="+856">Laos (+856)</option>
+                                <option data-icon="flag-icon flag-icon-lv" value="371" title="+371">Latvia (+371)</option>
+                                <option data-icon="flag-icon flag-icon-lb" value="961" title="+961">Lebanon (+961)</option>
+                                <option data-icon="flag-icon flag-icon-ls" value="266" title="+266">Lesotho (+266)</option>
+                                <option data-icon="flag-icon flag-icon-lr" value="231" title="+231">Liberia (+231)</option>
+                                <option data-icon="flag-icon flag-icon-ly" value="218" title="+218">Libya (+218)</option>
+                                <option data-icon="flag-icon flag-icon-li" value="417" title="+417">Liechtenstein (+417)</option>
+                                <option data-icon="flag-icon flag-icon-lt" value="370" title="+370">Lithuania (+370)</option>
+                                <option data-icon="flag-icon flag-icon-lu" value="352" title="+352">Luxembourg (+352)</option>
+                                <option data-icon="flag-icon flag-icon-mo" value="853" title="+853">Macao (+853)</option>
+                                <option data-icon="flag-icon flag-icon-mk" value="389" title="+389">Macedonia (+389)</option>
+                                <option data-icon="flag-icon flag-icon-mg" value="261" title="+261">Madagascar (+261)</option>
+                                <option data-icon="flag-icon flag-icon-mw" value="265" title="+265">Malawi (+265)</option>
+                                <option data-icon="flag-icon flag-icon-my" value="60" title="+60">Malaysia (+60)</option>
+                                <option data-icon="flag-icon flag-icon-mv" value="960" title="+960">Maldives (+960)</option>
+                                <option data-icon="flag-icon flag-icon-ml" value="223" title="+223">Mali (+223)</option>
+                                <option data-icon="flag-icon flag-icon-mt" value="356" title="+356">Malta (+356)</option>
+                                <option data-icon="flag-icon flag-icon-mh" value="692" title="+692">Marshall Islands (+692)</option>
+                                <option data-icon="flag-icon flag-icon-mq" value="596" title="+596">Martinique (+596)</option>
+                                <option data-icon="flag-icon flag-icon-mr" value="222" title="+222">Mauritania (+222)</option>
+                                <option data-icon="flag-icon flag-icon-yt" value="269" title="+269">Mayotte (+269)</option>
+                                <option data-icon="flag-icon flag-icon-mx" value="52" title="+52">Mexico (+52)</option>
+                                <option data-icon="flag-icon flag-icon-fm" value="691" title="+691">Micronesia (+691)</option>
+                                <option data-icon="flag-icon flag-icon-md" value="373" title="+373">Moldova (+373)</option>
+                                <option data-icon="flag-icon flag-icon-mc" value="377" title="+377">Monaco (+377)</option>
+                                <option data-icon="flag-icon flag-icon-mn" value="976" title="+976">Mongolia (+976)</option>
+                                <option data-icon="flag-icon flag-icon-ms" value="1664" title="+1664">Montserrat (+1664)</option>
+                                <option data-icon="flag-icon flag-icon-ma" value="212" title="+212">Morocco (+212)</option>
+                                <option data-icon="flag-icon flag-icon-mz" value="258" title="+258">Mozambique (+258)</option>
+                                <option data-icon="flag-icon flag-icon-mn" value="95" title="+95">Myanmar (+95)</option>
+                                <option data-icon="flag-icon flag-icon-na" value="264" title="+264">Namibia (+264)</option>
+                                <option data-icon="flag-icon flag-icon-nr" value="674" title="+674">Nauru (+674)</option>
+                                <option data-icon="flag-icon flag-icon-np" value="977" title="+977">Nepal (+977)</option>
+                                <option data-icon="flag-icon flag-icon-nl" value="31" title="+31">Netherlands (+31)</option>
+                                <option data-icon="flag-icon flag-icon-nc" value="687" title="+687">New Caledonia (+687)</option>
+                                <option data-icon="flag-icon flag-icon-nz" value="64" title="+64">New Zealand (+64)</option>
+                                <option data-icon="flag-icon flag-icon-ni" value="505" title="+505">Nicaragua (+505)</option>
+                                <option data-icon="flag-icon flag-icon-ne" value="227" title="+227">Niger (+227)</option>
+                                <option data-icon="flag-icon flag-icon-ng" value="234" title="+234">Nigeria (+234)</option>
+                                <option data-icon="flag-icon flag-icon-nu" value="683" title="+683">Niue (+683)</option>
+                                <option data-icon="flag-icon flag-icon-nf" value="672" title="+672">Norfolk Islands (+672)</option>
+                                <option data-icon="flag-icon flag-icon-np" value="670" title="+670">Northern Marianas (+670)</option>
+                                <option data-icon="flag-icon flag-icon-no" value="47" title="+47">Norway (+47)</option>
+                                <option data-icon="flag-icon flag-icon-om" value="968" title="+968">Oman (+968)</option>
+                                <option data-icon="flag-icon flag-icon-pw" value="680" title="+680">Palau (+680)</option>
+                                <option data-icon="flag-icon flag-icon-pa" value="507" title="+507">Panama (+507)</option>
+                                <option data-icon="flag-icon flag-icon-pg" value="675" title="+675">Papua New Guinea (+675)</option>
+                                <option data-icon="flag-icon flag-icon-py" value="595" title="+595">Paraguay (+595)</option>
+                                <option data-icon="flag-icon flag-icon-pe" value="51" title="+51">Peru (+51)</option>
+                                <option data-icon="flag-icon flag-icon-ph" value="63" title="+63">Philippines (+63)</option>
+                                <option data-icon="flag-icon flag-icon-pl" value="48" title="+48">Poland (+48)</option>
+                                <option data-icon="flag-icon flag-icon-pt" value="351" title="+351">Portugal (+351)</option>
+                                <option data-icon="flag-icon flag-icon-pr" value="1787" title="+1787">Puerto Rico (+1787)</option>
+                                <option data-icon="flag-icon flag-icon-qa" value="974" title="+974">Qatar</option>
+                                <option data-icon="flag-icon flag-icon-re" value="262" title="+262">Reunion (+262)</option>
+                                <option data-icon="flag-icon flag-icon-ro" value="40" title="+40">Romania (+40)</option>
+                                <option data-icon="flag-icon flag-icon-ru" value="7" title="+7">Russia (+7)</option>
+                                <option data-icon="flag-icon flag-icon-rw" value="250" title="+250">Rwanda (+250)</option>
+                                <option data-icon="flag-icon flag-icon-sm" value="378" title="+378">San Marino (+378)</option>
+                                <option data-icon="flag-icon flag-icon-st" value="239" title="+239">Sao Tome &amp; Principe (+239)</option>
+                                <option data-icon="flag-icon flag-icon-sa" value="966" title="+966">Saudi Arabia (+966)</option>
+                                <option data-icon="flag-icon flag-icon-sn" value="221" title="+221">Senegal (+221)</option>
+                                <option data-icon="flag-icon flag-icon-cs" value="381" title="+381">Serbia (+381)</option>
+                                <option data-icon="flag-icon flag-icon-sc" value="248" title="+248">Seychelles (+248)</option>
+                                <option data-icon="flag-icon flag-icon-sl" value="232" title="+232">Sierra Leone (+232)</option>
+                                <option data-icon="flag-icon flag-icon-sg" value="65" title="+65">Singapore (+65)</option>
+                                <option data-icon="flag-icon flag-icon-sk" value="421" title="+421">Slovak Republic (+421)</option>
+                                <option data-icon="flag-icon flag-icon-si" value="386" title="+386">Slovenia (+386)</option>
+                                <option data-icon="flag-icon flag-icon-sb" value="677" title="+677">Solomon Islands (+677)</option>
+                                <option data-icon="flag-icon flag-icon-so" value="252" title="+252">Somalia (+252)</option>
+                                <option data-icon="flag-icon flag-icon-za" value="27" title="+27">South Africa (+27)</option>
+                                <option data-icon="flag-icon flag-icon-es" value="34" title="+34">Spain (+34)</option>
+                                <option data-icon="flag-icon flag-icon-lk" value="94" title="+94">Sri Lanka (+94)</option>
+                                <option data-icon="flag-icon flag-icon-sh" value="290" title="+290">St. Helena (+290)</option>
+                                <option data-icon="flag-icon flag-icon-kn" value="1869" title="+1869">St. Kitts (+1869)</option>
+                                <option data-icon="flag-icon flag-icon-sc" value="1758" title="+1758">St. Lucia (+1758)</option>
+                                <option data-icon="flag-icon flag-icon-sd" value="249" title="+249">Sudan (+249)</option>
+                                <option data-icon="flag-icon flag-icon-sr" value="597" title="+597">Suriname (+597)</option>
+                                <option data-icon="flag-icon flag-icon-sz" value="268" title="+268">Swaziland (+268)</option>
+                                <option data-icon="flag-icon flag-icon-se" value="46" title="+46">Sweden (+46)</option>
+                                <option data-icon="flag-icon flag-icon-ch" value="41" title="+41">Switzerland (+41)</option>
+                                <option data-icon="flag-icon flag-icon-si" value="963" title="+963">Syria (+963)</option>
+                                <option data-icon="flag-icon flag-icon-tw" value="886" title="+886">Taiwan (+886)</option>
+                                <option data-icon="flag-icon flag-icon-tj" value="7" title="+7">Tajikstan (+7)</option>
+                                <option data-icon="flag-icon flag-icon-th" value="66" title="+66">Thailand (+66)</option>
+                                <option data-icon="flag-icon flag-icon-tg" value="228" title="+228">Togo (+228)</option>
+                                <option data-icon="flag-icon flag-icon-to" value="676" title="+676">Tonga (+676)</option>
+                                <option data-icon="flag-icon flag-icon-tt" value="1868" title="+1868">Trinidad &amp; Tobago (+1868)</option>
+                                <option data-icon="flag-icon flag-icon-tn" value="216" title="+216">Tunisia (+216)</option>
+                                <option data-icon="flag-icon flag-icon-tr" value="90" title="+90">Turkey (+90)</option>
+                                <option data-icon="flag-icon flag-icon-tm" value="7" title="+7">Turkmenistan (+7)</option>
+                                <option data-icon="flag-icon flag-icon-tm" value="993" title="+993">Turkmenistan (+993)</option>
+                                <option data-icon="flag-icon flag-icon-tc" value="1649" title="+1649">Turks &amp; Caicos Islands (+1649)</option>
+                                <option data-icon="flag-icon flag-icon-tv" value="688" title="+688">Tuvalu (+688)</option>
+                                <option data-icon="flag-icon flag-icon-ug" value="256" title="+256">Uganda (+256)</option>
+                                <option data-icon="flag-icon flag-icon-gb" value="44" title="+44">UK (+44)</option>
+                                <option data-icon="flag-icon flag-icon-ua" value="380" title="+380">Ukraine (+380)</option>
+                                <option data-icon="flag-icon flag-icon-ae" value="971" title="+971">United Arab Emirates (+971)</option>
+                                <option data-icon="flag-icon flag-icon-uy" value="598" title="+598">Uruguay (+598)</option>
+                                <option data-icon="flag-icon flag-icon-us" value="1" title="+1">USA (+1)</option>
+                                <option data-icon="flag-icon flag-icon-uz" value="7" title="+7">Uzbekistan (+7)</option>
+                                <option data-icon="flag-icon flag-icon-vu" value="678" title="+678">Vanuatu (+678)</option>
+                                <option data-icon="flag-icon flag-icon-va" value="379" title="+379">Vatican City (+379)</option>
+                                <option data-icon="flag-icon flag-icon-ve" value="58" title="+58">Venezuela (+58)</option>
+                                <option data-icon="flag-icon flag-icon-vn" value="84" title="+84">Vietnam (+84)</option>
+                                <option data-icon="flag-icon flag-icon-vg" value="84" title="+84">Virgin Islands - British (+1284)</option>
+                                <option data-icon="flag-icon flag-icon-vi" value="84" title="+84">Virgin Islands - US (+1340)</option>
+                                <option data-icon="flag-icon flag-icon-wf" value="681" title="+681">Wallis &amp; Futuna (+681)</option>
+                                <option data-icon="flag-icon flag-icon-ye" value="969" title="+969">Yemen (North)(+969)</option>
+                                <option data-icon="flag-icon flag-icon-ye" value="967" title="+967">Yemen (South)(+967)</option>
+                                <option data-icon="flag-icon flag-icon-zm" value="260" title="+260">Zambia (+260)</option>
+                                <option data-icon="flag-icon flag-icon-zw" value="263" title="+263">Zimbabwe (+263)</option>
+
+                            </select>
+                            <input type="text" class="form-control" placeholder="Mobile No." />
+                        </div>
+                        <div class="form-group">
+                            
+                            <button type="button" class="btn btn-blue w-100">Submit</button>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal_new_user" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+                <div class="modal-body">
+                    <button type="button" class="close_btn" data-dismiss="modal" aria-label="Close">
+                        <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><rect fill="none" height="24" width="24" /><g><polygon points="17.77,3.77 16,2 6,12 16,22 17.77,20.23 9.54,12" /></g></svg>
+                    </button>
+                    <div class="modal_heading">New User</div>
+                    <div class="modal_subheading">Let's get started</div>
+                    <div class="py-5">
+                        <div class="form-group"><input type="text" class="form-control" placeholder="Name" /></div>
+                        <div class="form-group"><input type="text" class="form-control" placeholder="Email Address" /></div>
+                        <div class="form-group cls_countryphoneselecter">
+                            <select name="phonecountryCode" class="selectpicker countrypicker countryphoneselecter" id="phonecountryCode2" data-width="100px" data-live-search="true" data-flag="true">
+                                <option data-icon="flag-icon flag-icon-dz" value="213" title="+213">Algeria (+213)</option>
+                                <option data-icon="flag-icon flag-icon-ad" value="376" title="+376">Andorra (+376)</option>
+                                <option data-icon="flag-icon flag-icon-ao" value="244" title="+244">Angola (+244)</option>
+                                <option data-icon="flag-icon flag-icon-ai" value="1264" title="+1264">Anguilla (+1264)</option>
+                                <option data-icon="flag-icon flag-icon-ag" value="1268" title="+1268">Antigua &amp; Barbuda (+1268)</option>
+                                <option data-icon="flag-icon flag-icon-ar" value="54" title="+54">Argentina (+54)</option>
+                                <option data-icon="flag-icon flag-icon-am" value="374" title="+374">Armenia (+374)</option>
+                                <option data-icon="flag-icon flag-icon-aw" value="297" title="+297">Aruba (+297)</option>
+                                <option data-icon="flag-icon flag-icon-au" value="61" title="+61">Australia (+61)</option>
+                                <option data-icon="flag-icon flag-icon-at" value="43" title="+43">Austria (+43)</option>
+                                <option data-icon="flag-icon flag-icon-az" value="994" title="+994">Azerbaijan (+994)</option>
+                                <option data-icon="flag-icon flag-icon-bs" value="1242" title="+1242">Bahamas (+1242)</option>
+                                <option data-icon="flag-icon flag-icon-bh" value="973" title="+973">Bahrain (+973)</option>
+                                <option data-icon="flag-icon flag-icon-bd" value="880" title="+880">Bangladesh (+880)</option>
+                                <option data-icon="flag-icon flag-icon-bb" value="1246" title="+1246">Barbados (+1246)</option>
+                                <option data-icon="flag-icon flag-icon-by" value="375" title="+375">Belarus (+375)</option>
+                                <option data-icon="flag-icon flag-icon-be" value="32" title="+32">Belgium (+32)</option>
+                                <option data-icon="flag-icon flag-icon-bz" value="501" title="+501">Belize (+501)</option>
+                                <option data-icon="flag-icon flag-icon-bj" value="229" title="+229">Benin (+229)</option>
+                                <option data-icon="flag-icon flag-icon-bm" value="1441" title="+1441">Bermuda (+1441)</option>
+                                <option data-icon="flag-icon flag-icon-bt" value="975" title="+975">Bhutan (+975)</option>
+                                <option data-icon="flag-icon flag-icon-bo" value="591" title="+591">Bolivia (+591)</option>
+                                <option data-icon="flag-icon flag-icon-ba" value="387" title="+387">Bosnia Herzegovina (+387)</option>
+                                <option data-icon="flag-icon flag-icon-bw" value="267" title="+267">Botswana (+267)</option>
+                                <option data-icon="flag-icon flag-icon-br" value="55" title="+55">Brazil (+55)</option>
+                                <option data-icon="flag-icon flag-icon-bn" value="673" title="+673">Brunei (+673)</option>
+                                <option data-icon="flag-icon flag-icon-bg" value="359" title="+359">Bulgaria (+359)</option>
+                                <option data-icon="flag-icon flag-icon-bf" value="226" title="+226">Burkina Faso (+226)</option>
+                                <option data-icon="flag-icon flag-icon-bi" value="257" title="+257">Burundi (+257)</option>
+                                <option data-icon="flag-icon flag-icon-kh" value="855" title="+855">Cambodia (+855)</option>
+                                <option data-icon="flag-icon flag-icon-cm" value="237" title="+237">Cameroon (+237)</option>
+                                <option data-icon="flag-icon flag-icon-ca" value="1" title="+1" selected>Canada (+1)</option>
+                                <option data-icon="flag-icon flag-icon-cv" value="238" title="+238">Cape Verde Islands (+238)</option>
+                                <option data-icon="flag-icon flag-icon-ky" value="1345" title="+1345">Cayman Islands (+1345)</option>
+                                <option data-icon="flag-icon flag-icon-cf" value="236" title="+236">Central African Republic (+236)</option>
+                                <option data-icon="flag-icon flag-icon-cl" value="56" title="+56">Chile (+56)</option>
+                                <option data-icon="flag-icon flag-icon-cn" value="86" title="+86">China (+86)</option>
+                                <option data-icon="flag-icon flag-icon-co" value="57" title="+57">Colombia (+57)</option>
+                                <option data-icon="flag-icon flag-icon-km" value="269" title="+269">Comoros (+269)</option>
+                                <option data-icon="flag-icon flag-icon-cg" value="242" title="+242">Congo (+242)</option>
+                                <option data-icon="flag-icon flag-icon-ck" value="682" title="+682">Cook Islands (+682)</option>
+                                <option data-icon="flag-icon flag-icon-cr" value="506" title="+506">Costa Rica (+506)</option>
+                                <option data-icon="flag-icon flag-icon-hr" value="385" title="+385">Croatia (+385)</option>
+                                <option data-icon="flag-icon flag-icon-cu" value="53" title="+53">Cuba (+53)</option>
+                                <option data-icon="flag-icon flag-icon-cy" value="90392" title="+90392">Cyprus North (+90392)</option>
+                                <option data-icon="flag-icon flag-icon-cy" value="357" title="+357">Cyprus South (+357)</option>
+                                <option data-icon="flag-icon flag-icon-cz" value="42" title="+42">Czech Republic (+42)</option>
+                                <option data-icon="flag-icon flag-icon-dk" value="45" title="+45">Denmark (+45)</option>
+                                <option data-icon="flag-icon flag-icon-dj" value="253" title="+253">Djibouti (+253)</option>
+                                <option data-icon="flag-icon flag-icon-dm" value="1809" title="+1809">Dominica (+1809)</option>
+                                <option data-icon="flag-icon flag-icon-do" value="1809" title="+1809">Dominican Republic (+1809)</option>
+                                <option data-icon="flag-icon flag-icon-ec" value="593" title="+593">Ecuador (+593)</option>
+                                <option data-icon="flag-icon flag-icon-eg" value="20" title="+20">Egypt (+20)</option>
+                                <option data-icon="flag-icon flag-icon-sv" value="503" title="+503">El Salvador (+503)</option>
+                                <option data-icon="flag-icon flag-icon-gq" value="240" title="+240">Equatorial Guinea (+240)</option>
+                                <option data-icon="flag-icon flag-icon-er" value="291" title="+291">Eritrea (+291)</option>
+                                <option data-icon="flag-icon flag-icon-ee" value="372" title="+372">Estonia (+372)</option>
+                                <option data-icon="flag-icon flag-icon-et" value="251" title="+251">Ethiopia (+251)</option>
+                                <option data-icon="flag-icon flag-icon-fk" value="500" title="+500">Falkland Islands (+500)</option>
+                                <option data-icon="flag-icon flag-icon-fo" value="298" title="+298">Faroe Islands (+298)</option>
+                                <option data-icon="flag-icon flag-icon-fj" value="679" title="+679">Fiji (+679)</option>
+                                <option data-icon="flag-icon flag-icon-fi" value="358" title="+358">Finland (+358)</option>
+                                <option data-icon="flag-icon flag-icon-fr" value="33" title="+33">France (+33)</option>
+                                <option data-icon="flag-icon flag-icon-gf" value="594" title="+594">French Guiana (+594)</option>
+                                <option data-icon="flag-icon flag-icon-pf" value="689" title="+689">French Polynesia (+689)</option>
+                                <option data-icon="flag-icon flag-icon-ga" value="241" title="+241">Gabon (+241)</option>
+                                <option data-icon="flag-icon flag-icon-gm" value="220" title="+220">Gambia (+220)</option>
+                                <option data-icon="flag-icon flag-icon-ge" value="7880" title="+7880">Georgia (+7880)</option>
+                                <option data-icon="flag-icon flag-icon-de" value="49" title="+49">Germany (+49)</option>
+                                <option data-icon="flag-icon flag-icon-gh" value="233" title="+233">Ghana (+233)</option>
+                                <option data-icon="flag-icon flag-icon-gi" value="350" title="+350">Gibraltar (+350)</option>
+                                <option data-icon="flag-icon flag-icon-gr" value="30" title="+30">Greece (+30)</option>
+                                <option data-icon="flag-icon flag-icon-gl" value="299" title="+299">Greenland (+299)</option>
+                                <option data-icon="flag-icon flag-icon-gd" value="1473" title="+1473">Grenada (+1473)</option>
+                                <option data-icon="flag-icon flag-icon-gp" value="590" title="+590">Guadeloupe (+590)</option>
+                                <option data-icon="flag-icon flag-icon-gu" value="671" title="+671">Guam (+671)</option>
+                                <option data-icon="flag-icon flag-icon-gt" value="502" title="+502">Guatemala (+502)</option>
+                                <option data-icon="flag-icon flag-icon-gn" value="224" title="+224">Guinea (+224)</option>
+                                <option data-icon="flag-icon flag-icon-gw" value="245" title="+245">Guinea - Bissau (+245)</option>
+                                <option data-icon="flag-icon flag-icon-gy" value="592" title="+592">Guyana (+592)</option>
+                                <option data-icon="flag-icon flag-icon-ht" value="509" title="+509">Haiti (+509)</option>
+                                <option data-icon="flag-icon flag-icon-hn" value="504" title="+504">Honduras (+504)</option>
+                                <option data-icon="flag-icon flag-icon-hk" value="852" title="+852">Hong Kong (+852)</option>
+                                <option data-icon="flag-icon flag-icon-hu" value="36" title="+36">Hungary (+36)</option>
+                                <option data-icon="flag-icon flag-icon-is" value="354" title="+354">Iceland (+354)</option>
+                                <option data-icon="flag-icon flag-icon-in" value="91" title="+91">India (+91)</option>
+                                <option data-icon="flag-icon flag-icon-id" value="62" title="+62">Indonesia (+62)</option>
+                                <option data-icon="flag-icon flag-icon-ir" value="98" title="+98">Iran (+98)</option>
+                                <option data-icon="flag-icon flag-icon-iq" value="964" title="+964">Iraq (+964)</option>
+                                <option data-icon="flag-icon flag-icon-ie" value="353" title="+353">Ireland (+353)</option>
+                                <option data-icon="flag-icon flag-icon-il" value="972" title="+972">Israel (+972)</option>
+                                <option data-icon="flag-icon flag-icon-it" value="39" title="+39">Italy (+39)</option>
+                                <option data-icon="flag-icon flag-icon-jm" value="1876" title="+1876">Jamaica (+1876)</option>
+                                <option data-icon="flag-icon flag-icon-jp" value="81" title="+81">Japan (+81)</option>
+                                <option data-icon="flag-icon flag-icon-jo" value="962" title="+962">Jordan (+962)</option>
+                                <option data-icon="flag-icon flag-icon-kz" value="7" title="+7">Kazakhstan (+7)</option>
+                                <option data-icon="flag-icon flag-icon-ke" value="254" title="+254">Kenya (+254)</option>
+                                <option data-icon="flag-icon flag-icon-ki" value="686" title="+686">Kiribati (+686)</option>
+                                <option data-icon="flag-icon flag-icon-kp" value="850" title="+850">Korea North (+850)</option>
+                                <option data-icon="flag-icon flag-icon-kr" value="82" title="+82">Korea South (+82)</option>
+                                <option data-icon="flag-icon flag-icon-kw" value="965" title="+965">Kuwait (+965)</option>
+                                <option data-icon="flag-icon flag-icon-kg" value="996" title="+996">Kyrgyzstan (+996)</option>
+                                <option data-icon="flag-icon flag-icon-la" value="856" title="+856">Laos (+856)</option>
+                                <option data-icon="flag-icon flag-icon-lv" value="371" title="+371">Latvia (+371)</option>
+                                <option data-icon="flag-icon flag-icon-lb" value="961" title="+961">Lebanon (+961)</option>
+                                <option data-icon="flag-icon flag-icon-ls" value="266" title="+266">Lesotho (+266)</option>
+                                <option data-icon="flag-icon flag-icon-lr" value="231" title="+231">Liberia (+231)</option>
+                                <option data-icon="flag-icon flag-icon-ly" value="218" title="+218">Libya (+218)</option>
+                                <option data-icon="flag-icon flag-icon-li" value="417" title="+417">Liechtenstein (+417)</option>
+                                <option data-icon="flag-icon flag-icon-lt" value="370" title="+370">Lithuania (+370)</option>
+                                <option data-icon="flag-icon flag-icon-lu" value="352" title="+352">Luxembourg (+352)</option>
+                                <option data-icon="flag-icon flag-icon-mo" value="853" title="+853">Macao (+853)</option>
+                                <option data-icon="flag-icon flag-icon-mk" value="389" title="+389">Macedonia (+389)</option>
+                                <option data-icon="flag-icon flag-icon-mg" value="261" title="+261">Madagascar (+261)</option>
+                                <option data-icon="flag-icon flag-icon-mw" value="265" title="+265">Malawi (+265)</option>
+                                <option data-icon="flag-icon flag-icon-my" value="60" title="+60">Malaysia (+60)</option>
+                                <option data-icon="flag-icon flag-icon-mv" value="960" title="+960">Maldives (+960)</option>
+                                <option data-icon="flag-icon flag-icon-ml" value="223" title="+223">Mali (+223)</option>
+                                <option data-icon="flag-icon flag-icon-mt" value="356" title="+356">Malta (+356)</option>
+                                <option data-icon="flag-icon flag-icon-mh" value="692" title="+692">Marshall Islands (+692)</option>
+                                <option data-icon="flag-icon flag-icon-mq" value="596" title="+596">Martinique (+596)</option>
+                                <option data-icon="flag-icon flag-icon-mr" value="222" title="+222">Mauritania (+222)</option>
+                                <option data-icon="flag-icon flag-icon-yt" value="269" title="+269">Mayotte (+269)</option>
+                                <option data-icon="flag-icon flag-icon-mx" value="52" title="+52">Mexico (+52)</option>
+                                <option data-icon="flag-icon flag-icon-fm" value="691" title="+691">Micronesia (+691)</option>
+                                <option data-icon="flag-icon flag-icon-md" value="373" title="+373">Moldova (+373)</option>
+                                <option data-icon="flag-icon flag-icon-mc" value="377" title="+377">Monaco (+377)</option>
+                                <option data-icon="flag-icon flag-icon-mn" value="976" title="+976">Mongolia (+976)</option>
+                                <option data-icon="flag-icon flag-icon-ms" value="1664" title="+1664">Montserrat (+1664)</option>
+                                <option data-icon="flag-icon flag-icon-ma" value="212" title="+212">Morocco (+212)</option>
+                                <option data-icon="flag-icon flag-icon-mz" value="258" title="+258">Mozambique (+258)</option>
+                                <option data-icon="flag-icon flag-icon-mn" value="95" title="+95">Myanmar (+95)</option>
+                                <option data-icon="flag-icon flag-icon-na" value="264" title="+264">Namibia (+264)</option>
+                                <option data-icon="flag-icon flag-icon-nr" value="674" title="+674">Nauru (+674)</option>
+                                <option data-icon="flag-icon flag-icon-np" value="977" title="+977">Nepal (+977)</option>
+                                <option data-icon="flag-icon flag-icon-nl" value="31" title="+31">Netherlands (+31)</option>
+                                <option data-icon="flag-icon flag-icon-nc" value="687" title="+687">New Caledonia (+687)</option>
+                                <option data-icon="flag-icon flag-icon-nz" value="64" title="+64">New Zealand (+64)</option>
+                                <option data-icon="flag-icon flag-icon-ni" value="505" title="+505">Nicaragua (+505)</option>
+                                <option data-icon="flag-icon flag-icon-ne" value="227" title="+227">Niger (+227)</option>
+                                <option data-icon="flag-icon flag-icon-ng" value="234" title="+234">Nigeria (+234)</option>
+                                <option data-icon="flag-icon flag-icon-nu" value="683" title="+683">Niue (+683)</option>
+                                <option data-icon="flag-icon flag-icon-nf" value="672" title="+672">Norfolk Islands (+672)</option>
+                                <option data-icon="flag-icon flag-icon-np" value="670" title="+670">Northern Marianas (+670)</option>
+                                <option data-icon="flag-icon flag-icon-no" value="47" title="+47">Norway (+47)</option>
+                                <option data-icon="flag-icon flag-icon-om" value="968" title="+968">Oman (+968)</option>
+                                <option data-icon="flag-icon flag-icon-pw" value="680" title="+680">Palau (+680)</option>
+                                <option data-icon="flag-icon flag-icon-pa" value="507" title="+507">Panama (+507)</option>
+                                <option data-icon="flag-icon flag-icon-pg" value="675" title="+675">Papua New Guinea (+675)</option>
+                                <option data-icon="flag-icon flag-icon-py" value="595" title="+595">Paraguay (+595)</option>
+                                <option data-icon="flag-icon flag-icon-pe" value="51" title="+51">Peru (+51)</option>
+                                <option data-icon="flag-icon flag-icon-ph" value="63" title="+63">Philippines (+63)</option>
+                                <option data-icon="flag-icon flag-icon-pl" value="48" title="+48">Poland (+48)</option>
+                                <option data-icon="flag-icon flag-icon-pt" value="351" title="+351">Portugal (+351)</option>
+                                <option data-icon="flag-icon flag-icon-pr" value="1787" title="+1787">Puerto Rico (+1787)</option>
+                                <option data-icon="flag-icon flag-icon-qa" value="974" title="+974">Qatar</option>
+                                <option data-icon="flag-icon flag-icon-re" value="262" title="+262">Reunion (+262)</option>
+                                <option data-icon="flag-icon flag-icon-ro" value="40" title="+40">Romania (+40)</option>
+                                <option data-icon="flag-icon flag-icon-ru" value="7" title="+7">Russia (+7)</option>
+                                <option data-icon="flag-icon flag-icon-rw" value="250" title="+250">Rwanda (+250)</option>
+                                <option data-icon="flag-icon flag-icon-sm" value="378" title="+378">San Marino (+378)</option>
+                                <option data-icon="flag-icon flag-icon-st" value="239" title="+239">Sao Tome &amp; Principe (+239)</option>
+                                <option data-icon="flag-icon flag-icon-sa" value="966" title="+966">Saudi Arabia (+966)</option>
+                                <option data-icon="flag-icon flag-icon-sn" value="221" title="+221">Senegal (+221)</option>
+                                <option data-icon="flag-icon flag-icon-cs" value="381" title="+381">Serbia (+381)</option>
+                                <option data-icon="flag-icon flag-icon-sc" value="248" title="+248">Seychelles (+248)</option>
+                                <option data-icon="flag-icon flag-icon-sl" value="232" title="+232">Sierra Leone (+232)</option>
+                                <option data-icon="flag-icon flag-icon-sg" value="65" title="+65">Singapore (+65)</option>
+                                <option data-icon="flag-icon flag-icon-sk" value="421" title="+421">Slovak Republic (+421)</option>
+                                <option data-icon="flag-icon flag-icon-si" value="386" title="+386">Slovenia (+386)</option>
+                                <option data-icon="flag-icon flag-icon-sb" value="677" title="+677">Solomon Islands (+677)</option>
+                                <option data-icon="flag-icon flag-icon-so" value="252" title="+252">Somalia (+252)</option>
+                                <option data-icon="flag-icon flag-icon-za" value="27" title="+27">South Africa (+27)</option>
+                                <option data-icon="flag-icon flag-icon-es" value="34" title="+34">Spain (+34)</option>
+                                <option data-icon="flag-icon flag-icon-lk" value="94" title="+94">Sri Lanka (+94)</option>
+                                <option data-icon="flag-icon flag-icon-sh" value="290" title="+290">St. Helena (+290)</option>
+                                <option data-icon="flag-icon flag-icon-kn" value="1869" title="+1869">St. Kitts (+1869)</option>
+                                <option data-icon="flag-icon flag-icon-sc" value="1758" title="+1758">St. Lucia (+1758)</option>
+                                <option data-icon="flag-icon flag-icon-sd" value="249" title="+249">Sudan (+249)</option>
+                                <option data-icon="flag-icon flag-icon-sr" value="597" title="+597">Suriname (+597)</option>
+                                <option data-icon="flag-icon flag-icon-sz" value="268" title="+268">Swaziland (+268)</option>
+                                <option data-icon="flag-icon flag-icon-se" value="46" title="+46">Sweden (+46)</option>
+                                <option data-icon="flag-icon flag-icon-ch" value="41" title="+41">Switzerland (+41)</option>
+                                <option data-icon="flag-icon flag-icon-si" value="963" title="+963">Syria (+963)</option>
+                                <option data-icon="flag-icon flag-icon-tw" value="886" title="+886">Taiwan (+886)</option>
+                                <option data-icon="flag-icon flag-icon-tj" value="7" title="+7">Tajikstan (+7)</option>
+                                <option data-icon="flag-icon flag-icon-th" value="66" title="+66">Thailand (+66)</option>
+                                <option data-icon="flag-icon flag-icon-tg" value="228" title="+228">Togo (+228)</option>
+                                <option data-icon="flag-icon flag-icon-to" value="676" title="+676">Tonga (+676)</option>
+                                <option data-icon="flag-icon flag-icon-tt" value="1868" title="+1868">Trinidad &amp; Tobago (+1868)</option>
+                                <option data-icon="flag-icon flag-icon-tn" value="216" title="+216">Tunisia (+216)</option>
+                                <option data-icon="flag-icon flag-icon-tr" value="90" title="+90">Turkey (+90)</option>
+                                <option data-icon="flag-icon flag-icon-tm" value="7" title="+7">Turkmenistan (+7)</option>
+                                <option data-icon="flag-icon flag-icon-tm" value="993" title="+993">Turkmenistan (+993)</option>
+                                <option data-icon="flag-icon flag-icon-tc" value="1649" title="+1649">Turks &amp; Caicos Islands (+1649)</option>
+                                <option data-icon="flag-icon flag-icon-tv" value="688" title="+688">Tuvalu (+688)</option>
+                                <option data-icon="flag-icon flag-icon-ug" value="256" title="+256">Uganda (+256)</option>
+                                <option data-icon="flag-icon flag-icon-gb" value="44" title="+44">UK (+44)</option>
+                                <option data-icon="flag-icon flag-icon-ua" value="380" title="+380">Ukraine (+380)</option>
+                                <option data-icon="flag-icon flag-icon-ae" value="971" title="+971">United Arab Emirates (+971)</option>
+                                <option data-icon="flag-icon flag-icon-uy" value="598" title="+598">Uruguay (+598)</option>
+                                <option data-icon="flag-icon flag-icon-us" value="1" title="+1">USA (+1)</option>
+                                <option data-icon="flag-icon flag-icon-uz" value="7" title="+7">Uzbekistan (+7)</option>
+                                <option data-icon="flag-icon flag-icon-vu" value="678" title="+678">Vanuatu (+678)</option>
+                                <option data-icon="flag-icon flag-icon-va" value="379" title="+379">Vatican City (+379)</option>
+                                <option data-icon="flag-icon flag-icon-ve" value="58" title="+58">Venezuela (+58)</option>
+                                <option data-icon="flag-icon flag-icon-vn" value="84" title="+84">Vietnam (+84)</option>
+                                <option data-icon="flag-icon flag-icon-vg" value="84" title="+84">Virgin Islands - British (+1284)</option>
+                                <option data-icon="flag-icon flag-icon-vi" value="84" title="+84">Virgin Islands - US (+1340)</option>
+                                <option data-icon="flag-icon flag-icon-wf" value="681" title="+681">Wallis &amp; Futuna (+681)</option>
+                                <option data-icon="flag-icon flag-icon-ye" value="969" title="+969">Yemen (North)(+969)</option>
+                                <option data-icon="flag-icon flag-icon-ye" value="967" title="+967">Yemen (South)(+967)</option>
+                                <option data-icon="flag-icon flag-icon-zm" value="260" title="+260">Zambia (+260)</option>
+                                <option data-icon="flag-icon flag-icon-zw" value="263" title="+263">Zimbabwe (+263)</option>
+
+                            </select>
+                            <input type="text" class="form-control" placeholder="Mobile No." />
+                        </div>
+                        <div class="modal_subheading mt-4">Verify OTP By</div>
+
+                        <div class="form-radio mt-3 d-flex align-items-center">
+                            <div class="radio mt-0 mr-5">
+                                <label>
+                                    <input type="radio" name="radio" checked="checked" /><i class="helper"></i>Mobile
+                                </label>
+                            </div>
+                            <div class="radio mt-0">
+                                <label>
+                                    <input type="radio" name="radio" /><i class="helper"></i>Email
+                                </label>
+                            </div>
+                        </div>
+
+                        <button type="button" class="btn btn-blue w-100">Submit</button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+
+   
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+	<script src="js/generateOTP.js"></script>
+
+</body>
+</html>
